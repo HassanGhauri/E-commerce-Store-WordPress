@@ -1,0 +1,92 @@
+/* ===========================
+   Header
+=========================== */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+/* ===========================
+   Logo + Site Name
+=========================== */
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    flex-shrink: 0;
+}
+
+/* Reduce logo size */
+.custom-logo {
+    width: 90px;
+    height: auto;
+}
+
+/* Site title */
+.site-title {
+    margin-left: -28px;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: #067647;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.site-title a:hover {
+    color: #055c38;
+}
+
+/* Hide tagline if you don't want it */
+.site-description {
+    display: none;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.main-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navigation li {
+    list-style: none;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #222;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main-navigation a:hover {
+    color: #067647;
+}
+
+/* Hide the mobile menu button on desktop */
+.menu-toggle {
+    display: none;
+}
