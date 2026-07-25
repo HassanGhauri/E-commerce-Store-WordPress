@@ -201,6 +201,13 @@ function ecommerce_scripts()
 	);
 
 	wp_enqueue_style(
+		'ecommerce-user-menu',
+		get_template_directory_uri() . '/assets/css/user-menu.css',
+		array(),
+		_S_VERSION
+	);
+
+	wp_enqueue_style(
 		'ecommerce-about',
 		get_template_directory_uri() . '/assets/css/about.css',
 		array('ecommerce-style'),

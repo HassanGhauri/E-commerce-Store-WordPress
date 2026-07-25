@@ -15,7 +15,11 @@
 /* ===========================
    Logo + Site Name
 =========================== */
-
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 25px;      /* Space between navigation and user icon */
+}
 .site-branding {
     display: flex;
     align-items: center;
