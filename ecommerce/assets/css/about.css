@@ -1,0 +1,106 @@
+/* ===========================
+   About Section
+=========================== */
+
+.about {
+
+    padding: 90px 40px;
+}
+
+.about .container {
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+.about .section-title {
+
+    text-align: center;
+
+    color: #067647;
+
+    font-size: 42px;
+
+    margin-bottom: 60px;
+}
+
+/* Content */
+
+.about-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 70px;
+
+    margin-bottom: 60px;
+}
+
+/* Text */
+
+.about-text {
+
+    flex: 1;
+}
+
+.about-text p {
+
+    font-size: 18px;
+
+    color: #444;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    text-align: justify;
+}
+
+/* Image */
+
+.about-image {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.about-image img {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+/* Contact */
+
+.about-contact {
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 35px;
+
+    text-align: center;
+}
+
+.about-contact p {
+
+    font-size: 18px;
+
+    color: #067647;
+
+    margin: 12px 0;
+
+    font-weight: 500;
+}
