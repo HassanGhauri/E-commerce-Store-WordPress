@@ -40,7 +40,8 @@ function ecommerce_setup()
 		* provide it for us.
 		*/
 	add_theme_support('title-tag');
-
+	
+	add_theme_support('woocommerce');
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
@@ -219,6 +220,31 @@ function ecommerce_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'ecommerce_scripts');
+
+
+/**
+ * ==========================================
+ * WooCommerce - AJAX Cart Count Update
+ * ==========================================
+ */
+add_filter('woocommerce_add_to_cart_fragments', 'ecommerce_cart_count_fragment');
+
+function ecommerce_cart_count_fragment($fragments)
+{
+	ob_start();
+
+	if (WC()->cart && WC()->cart->get_cart_contents_count() > 0) {
+?>
+		<span class="cart-count">
+			<?php echo WC()->cart->get_cart_contents_count(); ?>
+		</span>
+<?php
+	}
+
+	$fragments['.cart-count'] = ob_get_clean();
+
+	return $fragments;
+}
 
 /**
  * Implement the Custom Header feature.

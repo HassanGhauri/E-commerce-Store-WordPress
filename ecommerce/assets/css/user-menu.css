@@ -1,61 +1,77 @@
-.user-menu{
-    position:relative;
-    cursor:pointer;
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.user-icon{
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    object-fit:cover;
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
 }
 
-.user-dropdown{
+.user-dropdown {
+    position: absolute;
 
-    position:absolute;
+    top: calc(100% + 10px);
+    right: 0;
 
-    top:55px;
+    width: 180px;
 
-    right:0;
+    background: #fff;
 
-    width:180px;
+    border-radius: 10px;
 
-    background:#fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
-    border-radius:10px;
+    opacity: 0;
+    visibility: hidden;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transform: translateY(10px);
 
-    display:none;
+    transition: all 0.25s ease;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    z-index:100;
+    z-index: 1000;
 }
 
-.user-dropdown a{
+/* Invisible bridge */
+.user-menu::after {
+    content: "";
 
-    display:block;
+    position: absolute;
 
-    padding:12px 18px;
+    top: 100%;
+    right: 0;
 
-    text-decoration:none;
-
-    color:#333;
-
-    font-weight:500;
-
-    transition:.3s;
+    width: 180px;
+    height: 10px;
 }
 
-.user-dropdown a:hover{
+.user-dropdown a {
+    display: block;
 
-    background:#067647;
+    padding: 12px 18px;
 
-    color:white;
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: 500;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.user-menu:hover .user-dropdown{
+.user-dropdown a:hover {
+    background: #067647;
+    color: #fff;
+}
 
-    display:block;
+.user-menu:hover .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }

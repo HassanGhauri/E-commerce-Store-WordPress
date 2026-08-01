@@ -1,20 +1,44 @@
 <nav class="main-navigation">
 
-    <button class="menu-toggle">
+    <ul class="nav-menu">
 
-        Primary Menu
+        <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                Home
+            </a>
+        </li>
 
-    </button>
+        <li>
+            <a href="<?php echo esc_url(wc_get_checkout_url()); ?>">
+                Checkout
+            </a>
+        </li>
 
-    <?php
+        <li>
+            <a href="<?php echo esc_url(home_url('/sample-page/')); ?>">
+                Brochure
+            </a>
+        </li>
 
-    wp_nav_menu(
-        array(
-            'theme_location' => 'menu-1',
-            'menu_id' => 'primary-menu'
-        )
-    );
+        <?php get_template_part('template-parts/header/user-menu'); ?>
 
-    ?>
+        <li class="cart-menu">
+
+            <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="cart-link">
+
+                <img
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/shopping-cart.png"
+                    alt="Cart"
+                    class="cart-icon">
+
+                <span class="cart-count">
+                    <?php echo WC()->cart ? WC()->cart->get_cart_contents_count() : 0; ?>
+                </span>
+
+            </a>
+
+        </li>
+
+    </ul>
 
 </nav>

@@ -32,7 +32,5 @@
 
 				<?php get_template_part('template-parts/header/navigation'); ?>
 
-				<?php get_template_part('template-parts/header/user-menu'); ?>
-
 			</div>
 		</header>
