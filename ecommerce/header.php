@@ -34,3 +34,4 @@
 
 			</div>
 		</header>
+		<?php get_template_part('template-parts/cart/mini-cart'); ?>

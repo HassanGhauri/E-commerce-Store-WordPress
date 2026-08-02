@@ -40,7 +40,7 @@ function ecommerce_setup()
 		* provide it for us.
 		*/
 	add_theme_support('title-tag');
-	
+
 	add_theme_support('woocommerce');
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
@@ -213,6 +213,21 @@ function ecommerce_scripts()
 		get_template_directory_uri() . '/assets/css/about.css',
 		array('ecommerce-style'),
 		_S_VERSION
+	);
+
+	wp_enqueue_style(
+		'ecommerce-minicart',
+		get_template_directory_uri() . '/assets/css/minicart.css',
+		array(),
+		_S_VERSION
+	);
+
+	wp_enqueue_script(
+		'ecommerce-minicart',
+		get_template_directory_uri() . '/assets/js/minicart.js',
+		array('jquery'),
+		_S_VERSION,
+		true
 	);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

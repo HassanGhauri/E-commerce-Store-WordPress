@@ -24,7 +24,7 @@
 
         <li class="cart-menu">
 
-            <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="cart-link">
+            <a href="#" class="cart-link" id="cart-toggle">
 
                 <img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/shopping-cart.png"

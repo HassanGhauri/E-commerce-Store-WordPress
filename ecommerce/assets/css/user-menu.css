@@ -1,77 +1,107 @@
+/* ==========================================
+   User Menu
+========================================== */
+
 .user-menu {
+
     position: relative;
-    display: inline-block;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    list-style: none;
+
+    flex: 0 0 auto;
+}
+
+/* ==========================================
+   User Icon
+========================================== */
+
+.user-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
     cursor: pointer;
 }
 
-.user-icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-}
+/* ==========================================
+   Dropdown
+========================================== */
 
 .user-dropdown {
+
     position: absolute;
 
-    top: calc(100% + 10px);
-    right: 0;
+    top: calc(100% + 4px);
 
-    width: 180px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 110px;
 
     background: #fff;
 
     border-radius: 10px;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
 
     opacity: 0;
+
     visibility: hidden;
 
-    transform: translateY(10px);
+    transition: opacity .25s ease,
+                visibility .25s ease,
+                transform .25s ease;
 
-    transition: all 0.25s ease;
+    z-index: 9999;
 
     overflow: hidden;
-
-    z-index: 1000;
 }
 
-/* Invisible bridge */
-.user-menu::after {
-    content: "";
+/* Show dropdown */
 
-    position: absolute;
+.user-menu:hover .user-dropdown {
 
-    top: 100%;
-    right: 0;
+    opacity: 1;
 
-    width: 180px;
-    height: 10px;
+    visibility: visible;
+
+    transform: translateX(-50%);
 }
+
+/* Links */
 
 .user-dropdown a {
+
     display: block;
 
     padding: 12px 18px;
 
-    text-decoration: none;
-
     color: #333;
+
+    text-decoration: none;
 
     font-weight: 500;
 
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: .25s;
 }
 
 .user-dropdown a:hover {
-    background: #067647;
-    color: #fff;
-}
 
-.user-menu:hover .user-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    background: #067647;
+
+    color: white;
 }
