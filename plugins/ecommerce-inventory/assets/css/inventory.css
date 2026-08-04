@@ -1,0 +1,61 @@
+.eci-inventory {
+
+    max-width: 1300px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+.eci-inventory h1 {
+
+    color: #067647;
+
+    margin-bottom: 30px;
+
+    font-size: 34px;
+}
+
+.eci-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.eci-table thead {
+
+    background: #067647;
+
+    color: #fff;
+}
+
+.eci-table th,
+.eci-table td {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #eee;
+
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+.eci-table tbody tr:hover {
+
+    background: #f7faf8;
+}
+
+.eci-table img {
+
+    border-radius: 6px;
+}
